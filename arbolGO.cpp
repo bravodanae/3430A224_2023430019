@@ -5,10 +5,6 @@
 #include <cstdlib>
 using namespace std;
 
-// ============================================================
-// ESTRUCTURAS
-// ============================================================
-
 // Estructura que representa un termino GO
 struct TerminoGO {
     string codigoGO;
@@ -24,10 +20,7 @@ struct NodoAVL {
     int FE; // factor de equilibrio
 };
 
-// ============================================================
 // FUNCIONES DE UTILIDAD
-// ============================================================
-
 NodoAVL* crearNodo(const TerminoGO& dato) {
     NodoAVL* nuevo = new NodoAVL;
     nuevo->dato = dato;
@@ -37,9 +30,7 @@ NodoAVL* crearNodo(const TerminoGO& dato) {
     return nuevo;
 }
 
-// ============================================================
 // ROTACIONES AVL
-// ============================================================
 
 // Rotacion simple izquierda-izquierda (II)
 NodoAVL* rotacionII(NodoAVL* nodo) {
@@ -137,9 +128,7 @@ NodoAVL* rotacionDI(NodoAVL* nodo) {
     return nodo2;
 }
 
-// ============================================================
 // INSERCION AVL
-// ============================================================
 
 NodoAVL* insertarAVL(NodoAVL* raiz, const TerminoGO& dato, bool* crece) {
     if (raiz == nullptr) {
@@ -185,9 +174,7 @@ NodoAVL* insertarAVL(NodoAVL* raiz, const TerminoGO& dato, bool* crece) {
     return raiz;
 }
 
-// ============================================================
-// ELIMINACION AVL (COMPLETA)
-// ============================================================
+// ELIMINACION AVL 
 
 // Equilibrar tras eliminar desde izquierda
 NodoAVL* equilibrarTrasEliminarIzquierda(NodoAVL* nodo, bool* decrece) {
@@ -277,10 +264,7 @@ NodoAVL* eliminarAVL(NodoAVL* raiz, string codigoGO, bool* decrece, bool* elimin
     return raiz;
 }
 
-// ============================================================
 // BUSQUEDA EN AVL
-// ============================================================
-
 void buscarGO(NodoAVL* raiz, string codigo) {
     if (raiz == nullptr) {
         cout << "No se encontro el termino GO: " << codigo << endl;
@@ -298,10 +282,8 @@ void buscarGO(NodoAVL* raiz, string codigo) {
         buscarGO(raiz->der, codigo);
 }
 
-// ============================================================
-// GENERAR GRAFO CON GRAPHVIZ
-// ============================================================
 
+// GENERAR GRAFO CON GRAPHVIZ
 void generarGrafoRec(ofstream& archivo, NodoAVL* nodo) {
     if (nodo != nullptr) {
         archivo << "\"" << nodo->dato.funcion << "\\n" << nodo->dato.score 
@@ -335,10 +317,7 @@ void generarGrafo(NodoAVL* raiz) {
     system("eog grafoGO.png &");
 }
 
-// ============================================================
 // CARGAR DESDE CSV
-// ============================================================
-
 NodoAVL* cargarDesdeCSV(string nombreArchivo, NodoAVL* raiz) {
     ifstream archivo(nombreArchivo);
     if (!archivo.is_open()) {
@@ -372,9 +351,6 @@ NodoAVL* cargarDesdeCSV(string nombreArchivo, NodoAVL* raiz) {
     return raiz;
 }
 
-// ============================================================
-// LIBERAR MEMORIA
-// ============================================================
 
 void liberarArbol(NodoAVL* raiz) {
     if (raiz == nullptr) return;
@@ -383,24 +359,16 @@ void liberarArbol(NodoAVL* raiz) {
     delete raiz;
 }
 
-// ============================================================
-// MENU PRINCIPAL
-// ============================================================
-
 void menu() {
-    cout << "\n========= MENU AVL =========" << endl;
+    cout << "\n MENU AVL " << endl;
     cout << "1. Insertar termino GO" << endl;
     cout << "2. Eliminar termino GO" << endl;
     cout << "3. Buscar termino GO" << endl;
     cout << "4. Mostrar grafo" << endl;
     cout << "0. Salir" << endl;
-    cout << "============================" << endl;
+    cout << " " << endl;
     cout << "Seleccione una opcion: ";
 }
-
-// ============================================================
-// MAIN
-// ============================================================
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
