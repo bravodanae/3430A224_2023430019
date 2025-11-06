@@ -1,0 +1,12 @@
+digraph G {
+graph [rankdir=LR]
+node [style=filled fillcolor="#00ff005f"]
+
+0 -> 1 [label=4];
+0 -> 2 [label=11];
+1 -> 2 [label=6];
+1 -> 3 [label=2];
+2 -> 1 [label=3];
+2 -> 3 [label=6];
+3 -> 2 [label=5];
+}
