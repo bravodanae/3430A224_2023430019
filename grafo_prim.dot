@@ -1,0 +1,9 @@
+graph G {
+graph [rankdir=LR]
+node [style=filled fillcolor="#00ff005f"]
+
+a -- b [label=4, color="red", penwidth=2.0];
+b -- c [label=3, color="red", penwidth=2.0];
+a -- d [label=4, color="red", penwidth=2.0];
+a -- e [label=3, color="red", penwidth=2.0];
+}
