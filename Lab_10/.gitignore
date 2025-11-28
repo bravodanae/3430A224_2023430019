@@ -1,0 +1,6 @@
+# Ignore editor/OS files
+*~ 
+*.swp
+.DS_Store
+
+# No ignoramos los CSV ni los PDB: queremos subirlos
