@@ -1,0 +1,84 @@
+digraph alineamiento {
+  rankdir = LR;
+  node [shape=plaintext,fontname="Monospace"];
+  S [label=<
+    <table border='0' cellborder='1' cellspacing='0'>
+      <tr>
+        <td>A</td>
+        <td>C</td>
+        <td>A</td>
+        <td>G</td>
+        <td>C</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>A</td>
+        <td>G</td>
+        <td>T</td>
+        <td>A</td>
+        <td>G</td>
+        <td>G</td>
+        <td>C</td>
+        <td>G</td>
+        <td>G</td>
+        <td>T</td>
+        <td>A</td>
+        <td>T</td>
+        <td>T</td>
+        <td>C</td>
+        <td>C</td>
+        <td>T</td>
+        <td>C</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>C</td>
+        <td>A</td>
+        <td>C</td>
+        <td>G</td>
+      </tr>
+    </table>
+  >];
+  T [label=<
+    <table border='0' cellborder='1' cellspacing='0'>
+      <tr>
+        <td>A</td>
+        <td>C</td>
+        <td>A</td>
+        <td>G</td>
+        <td>C</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>C</td>
+        <td>A</td>
+        <td>G</td>
+        <td>T</td>
+        <td>A</td>
+        <td>G</td>
+        <td>G</td>
+        <td>C</td>
+        <td>G</td>
+        <td>G</td>
+        <td>T</td>
+        <td>A</td>
+        <td>T</td>
+        <td>T</td>
+        <td>C</td>
+        <td>C</td>
+        <td>T</td>
+        <td>C</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>C</td>
+        <td>A</td>
+        <td>C</td>
+        <td>A</td>
+      </tr>
+    </table>
+  >];
+}
